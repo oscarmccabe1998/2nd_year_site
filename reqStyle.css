@@ -1,0 +1,51 @@
+body{
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.reqCol{
+width:30%;
+}
+
+.metCol{
+width:60%;
+}
+
+.fileCol{
+width:10%;
+}
+
+
+td { 
+  padding: 5px;
+}
+
+thead tr {
+  background-color: #2864be;
+  color: #ffffff;
+  text-align: left;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+}
+
+ tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #d4d3d3d2;
+}

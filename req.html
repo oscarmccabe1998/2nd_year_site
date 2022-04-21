@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Requirements page</title>
+	<link rel="stylesheet" href="reqStyle.css">
+</head>
+<body>
+
+<h1>CMP204 Requirements Page - Unit 2 Assessment</h1>
+
+<p>If you have not met a requirement, do not delete it from the table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th class="reqCol">Requirement</th>
+      <th class="metCol">How did you meet this requirement?</th>
+      <th class="fileCol">File name(s), line no.</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>HTML, CSS, JavaScript has been contained within separate files.</td>
+      <td>By writing all CSS and JavaScript functions to seperate files and then calling them within the HTML code within the PHP files. </td>
+      <td>login.php - line 99, signup.php - line 102, navbar.html - line 30, home.php line 12, music.php - lines 12 and 142, about.php - line 12 and liveshows.php - lines 12, 15, 324 and 325</td>
+    </tr>
+
+    <tr>
+      <td>A clear use of HTML5.</td>
+      <td>By starting all the pages with the correct doctype tag and nesting all the tags correctly i was able to implement html 5 efficiently and effectivley. When checked against the Markup Validation Service the code had no errors and very minimal warnings.</td>
+      <td>login.php - line 91, signup.php - line 96 and account_settings.php line 64</td>
+    </tr>
+    <tr>
+      <td>Use of the Bootstrap framework providing a responsive layout.</td>
+      <td>By using the Bootstrap grid system, I was able to create responsive pages that resize and reorder content to fit different screen aspect ratio's through graceful degradation. Bootstrap forms were also used to resize the user input fields for when the user needs to send data to the database. Bootstrap was also used to ensure that buttons would stay in the correct place throughout the application (centered within the grids).</td>
+      <td>login.php lines 104 to 124, signup.php lines 109 to 136, home.php lines 33 to 68, music.php lines 31 to 137, about.php lines 34 to 84, liveshows.php lines 32 to 45, 51 to 57, 83 to 153, 155 to 268, 303 to 320 and account_settings.php lines 85 to 139 </td>
+    </tr>
+    <tr>
+      <td>Use of JavaScript to manipulate the DOM based on an event.</td>
+      <td>JavaScript was used to manipulate the DOM by allowing the user to switch the theme of the application to a dark one. This was done by adding an event listener to the darkmode toggle swtich which then either adds or removes the darkmode css class depending on weather or not the feature is active. It then saves the preferces to local storage and then sets the toggle to the correct position so the feature can be implemented across all pages and remeber the user's preference when they next log on with that device. JavaScript was also used to resize the iframe used in the music page where it adds the mobile or desktop css class to the video based on the end devices pixel width.</td>
+      <td>darkmode.js lines 1 to 28, linked to in the navbar.html file on line 30, resize.js lines 1 to 12 and linked to from music.php line 142.</td>
+    </tr>
+    <tr>
+      <td>Use of jQuery in conjunction with the DOM.</td>
+      <td>jQuery was used to prepend an image to the div named 'import' in liveshows.php. The image is then dimmed and the css class named 'greyscale' is added to the image. The hover function is then used to change the image's opacity and colour's based on if the user is hovering the mouse over the image. the animate function was also used to add some transition for when the image is altered.</td>
+      <td>image.js lines 1 to 17, called from liveshows.php on line 15.</td>
+    </tr>
+    <tr>
+      <td>Use of AJAX (pure JavaScript i.e. without the use of a library).</td>
+      <td>AJAX was used to receive the artists tour dates from a text file named 'tour_info.txt' via a XMLHttpRequest. This is called when the user clicks the button on the live shows page and is initialised through an onclick event.</td>
+      <td>dates.js lines 1 to 15 called from liveshows.php on line 324 and calls the file called tour_info.txt.</td>
+    </tr>
+    <tr>
+      <td>Use of the jQuery AJAX function.</td>
+      <td>The jQuery AJAX function was used to display ticket availability for the artist's upcoming live shows. This was done by callng the tickets.php file through the jQuery AJAX function which then selects the data via a prepared statment and echo's the values from the database.</td>
+      <td>tickets.js lines 1 to 11 which calls tickets.php and is called on line 325 in liveshows.php</td>
+    </tr>
+    <tr>
+      <td>User login functionality (PHP/MySQL).</td>
+      <td>The application allows a user to signup, login, update their password and delete their account. This is all done through prepared statements and stores the users password securly through salting and hashing. The application also makes use of session data to verify that a user is logged in and kicks anyone who is not authenticated back to the login page. This was done by including the checklogin file to all the pages that the user needs to be logged in to access.</td>
+      <td>checklogin.php lines 6 to 14, login.php lines 12 to 87, signup.php lines 10 to 92, account_settings.php lines 11 to 61 and delete_account.php lines 7 to 26.</td>
+    </tr>
+    <tr>
+      <td>Ability to select (SELECT), add (INSERT), edit (UPDATE) and delete (DELETE) information from a database (PHP/MySQL).</td>
+      <td>For the user to read and alter the content of a database the table set_list was created where users can add (INSERT) to the database and say what songs the artist is playing in his shows and at what time the song was played. If the user decides that the time of the song starting was incorrect they can UPDATE the table to change the time that was entered. If the user decides that the entry was wrong all together they can DELETE the row from the table completely. Users can SELECT the data when they visit the page as the table is displayed there.</td>
+      <td>liveshows.php lines 66 to 207 and lines 231 to 300.</td>
+    </tr>
+    <tr>
+      <td>Consideration of GDPR and the Cookie Law.</td>
+      <td>Users can read how the application makes use of their data and what cookie data is used and allows them to get in contact if they have any further questions.</td>
+      <td>account_settings.php lines 128 to 133.</td>
+    </tr>
+    <tr>
+      <td>SQL queries written as prepared statements.</td>
+      <td>All SQL queries are written as prepared statements. This was done to improve security by seperating SQL logic from the data being entered. This is to help prevent SQL injection attacks from occuring.</td>
+      <td>login.php lines 38 to 82, signup.php lines 17 to 41 and 68 to 87, account_settings.php lines 35 to 56, tickets.php lines 8 to 16, delete_account.php lines 7 to 25 and liveshows.php lines 71 to 78, 108 to 123, 188 to 204, 247 to 263.</td>
+    </tr>
+    <tr>
+      <td>Passwords should be salted and hashed.</td>
+      <td>Passwords are salted and hashed using the password_hash function along with PASSWORD_DEFAULT which uses the bycrypt algorithm. This was chosen as it's designed to change over time as newer and stronger algorithms are added. The login function then uses the password_verify function to authenticate the users password.</td>
+      <td>signup.php line 76 and login.php line 57.</td>
+    </tr>
+    <tr>
+      <td>User input is sanitised.</td>
+      <td>To protect against cross site scripting every form where users can input data and upload it to the data base the htmlspecialchars function is used to remove things like quotes and script tags from the users input before inserting it into the database. the trim function is also used to remove any white space from either side of the user input.</td>
+      <td>login.php lines 22, 29 and 107, signup.php lines 13, 46, 48, 51, 55, 58 and 110, liveshows.php lines 95, 101, 104, 137, 173, 177, 184, 210, 232, 236, 239, 243, 275, 279, 306 and account_settings.php lines 14, 16, 19, 23, 26 and 92  </td>
+    </tr>
+  </tbody>
+
+
+
+</table>
+		
+</body>
+</html>
+
+
+

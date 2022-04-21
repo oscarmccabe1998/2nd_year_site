@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif ;
+    background-image: url("https://dynamicmedia.livenationinternational.com/Media/v/x/b/6b1bcdb1-fbf1-437a-aac1-e5a1aa4c70db.jpg?auto=webp&width=1507.2");
+    background-repeat: no-repeat;
+    
+    
+     /* Control the height of the image */
+  min-height: 790px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    
+}
+
+.login{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background: rgb(0,0,0, 0.9);
+    
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    outline: white;
+}
+
+#loginButton{
+    border-radius: 6px;
+    text-align: center;
+}
+
